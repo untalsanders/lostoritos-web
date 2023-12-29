@@ -75,6 +75,14 @@
                         "styles": ["src/styles.css"],
                         "scripts": []
                     }
+                },
+                "deploy": {
+                    "builder": "angular-cli-ghpages:deploy",
+                    "options": {
+                        "baseHref": "https://untalsanders.github.io/realcoholicosfc/",
+                        "name": "Sanders Gutiérrez",
+                        "email": "ing.sanders@gmail.com"
+                    }
                 }
             }
         }
