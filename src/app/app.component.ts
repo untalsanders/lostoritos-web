@@ -1,11 +1,12 @@
 import { Component } from '@angular/core'
-import { HeroComponent } from './components/hero/hero.component'
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
-    standalone: true,
     selector: 'app-root',
+    standalone: true,
+    imports: [HeaderComponent, FooterComponent],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    imports: [HeroComponent],
 })
 export class AppComponent {}

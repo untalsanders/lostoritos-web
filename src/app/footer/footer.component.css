@@ -1,0 +1,48 @@
+footer {
+    background-color: #111;
+    color: #d4d4d4;
+}
+
+.main-footer {
+    padding: .75rem 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.sub-footer {
+    background-color: #222;
+    color: #ccc;
+
+    .container {
+        display: flex;
+    }
+}
+
+.copyright {
+    em {
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 700;
+        transition: all .25s ease-in-out;
+        background: linear-gradient(#eee, rgb(196, 135, 44));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &:hover {
+            color: #f90;
+        }
+    }
+
+}
+
+.developed-by {
+    a {
+        &:hover {
+            color: #f90;
+        }
+    }
+}

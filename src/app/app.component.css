@@ -1,5 +1,6 @@
-.app__main {
-    height: 100vh;
+:host {
+    min-height: 100vh;
     display: grid;
-    place-content: center;
+    grid-template-rows: min-content 1fr min-content;
 }
+
