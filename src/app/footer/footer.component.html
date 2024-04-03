@@ -1,12 +1,58 @@
 <footer>
+    <div class="social-media">
+        <div class="container">
+            <div class="logo">
+                <app-logo-svg />
+                <div class="brand-text">
+                    <span>Real Cohólicos FC</span>
+                    <small>Pasión desmedida por el guaro</small>
+                </div>
+            </div>
+            <div class="social-network">
+                <h2>Síguenos en nuestras redes</h2>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <fa-icon [icon]="faFacebook"></fa-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <fa-icon [icon]="faTwitter"></fa-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <fa-icon [icon]="faInstagram"></fa-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <fa-icon [icon]="faYoutube"></fa-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <fa-icon [icon]="faTiktok"></fa-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <fa-icon [icon]="faThreads"></fa-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <app-mobile-apps></app-mobile-apps>
+        </div>
+    </div>
     <div class="sub-footer">
         <div class="container">
-            <app-logo/>
             <nav class="navbar-footer">
                 <ul>
-                    <li><a href="">Aviso Legal</a></li>
-                    <li><a href="">Privacidad</a></li>
-                    <li><a href="">Cookies</a></li>
+                    <li><a href="#">Aviso Legal</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Cookies</a></li>
                 </ul>
             </nav>
         </div>
@@ -14,10 +60,12 @@
     <div class="main-footer">
         <div class="container">
             <div class="copyright">
-                Página Oficial - <em>Real Cohólicos FC</em> &copy; 2024 Todos los derechos reservados.
+                Página Oficial &copy; 2024 <em>Real Cohólicos FC</em>. Todos los derechos reservados.
             </div>
             <div class="developed-by">
-                <small>Desarrollado por: <a href="http://untalsanders.github.io" target="_blank">UnTalSanders</a></small>
+                <small>
+                    Desarrollado por: <a href="http://untalsanders.github.io" target="_blank">UnTalSanders</a>
+                </small>
             </div>
         </div>
     </div>

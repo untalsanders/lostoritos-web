@@ -13,7 +13,6 @@
         "format:check": "prettier --check ."
     },
     "dependencies": {
-        "@angular/animations": "17.3.2",
         "@angular/common": "17.3.2",
         "@angular/compiler": "17.3.2",
         "@angular/core": "17.3.2",
@@ -32,8 +31,8 @@
         "zone.js": "0.14.2"
     },
     "devDependencies": {
-        "@angular-devkit/build-angular": "17.3.2",
-        "@angular/cli": "17.3.2",
+        "@angular-devkit/build-angular": "17.2.3",
+        "@angular/cli": "17.3.3",
         "@angular/compiler-cli": "17.3.2",
         "@types/jasmine": "5.1.0",
         "angular-cli-ghpages": "1.0.7",

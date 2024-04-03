@@ -1,11 +1,21 @@
 import { Component } from '@angular/core'
-import { LogoComponent } from '../logo/logo.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { faFacebook, faInstagram, faThreads, faTiktok, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { LogoSvgComponent } from '../logo-svg/logo-svg.component'
+import { MobileAppsComponent } from '../mobile-apps/mobile-apps.component'
 
 @Component({
     selector: 'app-footer',
     standalone: true,
-    imports: [LogoComponent],
+    imports: [FontAwesomeModule, LogoSvgComponent, MobileAppsComponent],
     templateUrl: './footer.component.html',
     styleUrl: './footer.component.css',
 })
-export class FooterComponent {}
+export class FooterComponent {
+    faTwitter = faTwitter
+    faInstagram = faInstagram
+    faYoutube = faYoutube
+    faFacebook = faFacebook
+    faTiktok = faTiktok
+    faThreads = faThreads
+}

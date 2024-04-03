@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { LogoSvgComponent } from '../logo-svg/logo-svg.component';
+import { LogoSvgComponent } from '../logo-svg/logo-svg.component'
 
 @Component({
     selector: 'app-logo',
