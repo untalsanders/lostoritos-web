@@ -11,15 +11,16 @@
 .logo-title {
     display: flex;
     flex-direction: column;
-    line-height: 1;
+    line-height: 1.4;
 
     span:first-child {
         font-size: 2rem;
         font-weight: 700;
     }
 
-    span:last-child {
+    small {
         font-weight: 300;
         color: #ccc;
+        letter-spacing: 2.5px;
     }
 }

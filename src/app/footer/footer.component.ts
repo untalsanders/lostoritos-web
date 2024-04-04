@@ -2,6 +2,7 @@ import { Component } from '@angular/core'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { faFacebook, faInstagram, faThreads, faTiktok, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { LogoSvgComponent } from '../logo-svg/logo-svg.component'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { MobileAppsComponent } from '../mobile-apps/mobile-apps.component'
 
 @Component({
@@ -18,4 +19,5 @@ export class FooterComponent {
     faFacebook = faFacebook
     faTiktok = faTiktok
     faThreads = faThreads
+    faHeart = faHeart
 }

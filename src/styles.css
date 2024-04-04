@@ -41,6 +41,10 @@ ul {
     padding: 0;
 }
 
+li {
+    list-style: none;
+}
+
 .container {
     max-width: clamp(calc(20rem - 2.5rem), 80vw, 95vw);
     margin-left: auto;
