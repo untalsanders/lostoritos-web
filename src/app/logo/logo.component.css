@@ -1,3 +1,25 @@
-picture {
-    background-color: #fff;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    img {
+        width: 4rem;
+    }
+}
+
+.logo-title {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+
+    span:first-child {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    span:last-child {
+        font-weight: 300;
+        color: #ccc;
+    }
 }

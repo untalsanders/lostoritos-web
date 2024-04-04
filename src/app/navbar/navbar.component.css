@@ -1,6 +1,7 @@
 ul {
     display: flex;
-    padding: 0;
+    flex-wrap: wrap;
+    gap: 1rem;
 
     li {
         list-style: none;

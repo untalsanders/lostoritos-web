@@ -1,11 +1,11 @@
 import { Component } from '@angular/core'
-import { LogoSvgComponent } from '../logo-svg/logo-svg.component'
+import { LogoComponent } from '../logo/logo.component'
 import { NavbarComponent } from '../navbar/navbar.component'
 
 @Component({
     selector: 'app-header',
     standalone: true,
-    imports: [LogoSvgComponent, NavbarComponent],
+    imports: [LogoComponent, NavbarComponent],
     templateUrl: './header.component.html',
     styleUrl: './header.component.css',
 })
