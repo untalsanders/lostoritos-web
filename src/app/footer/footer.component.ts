@@ -8,7 +8,7 @@ import { MobileAppsComponent } from '../mobile-apps/mobile-apps.component'
 @Component({
     selector: 'app-footer',
     standalone: true,
-    imports: [FontAwesomeModule, LogoSvgComponent, MobileAppsComponent],
+    imports: [FontAwesomeModule, MobileAppsComponent],
     templateUrl: './footer.component.html',
     styleUrl: './footer.component.css',
 })

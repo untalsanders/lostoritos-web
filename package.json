@@ -13,13 +13,13 @@
         "format:check": "prettier --check ."
     },
     "dependencies": {
-        "@angular/common": "17.3.2",
-        "@angular/compiler": "17.3.2",
-        "@angular/core": "17.3.2",
-        "@angular/forms": "17.3.2",
-        "@angular/platform-browser": "17.3.2",
-        "@angular/platform-browser-dynamic": "17.3.2",
-        "@angular/router": "17.3.2",
+        "@angular/common": "19.2.2",
+        "@angular/compiler": "19.2.2",
+        "@angular/core": "19.2.2",
+        "@angular/forms": "19.2.2",
+        "@angular/platform-browser": "19.2.2",
+        "@angular/platform-browser-dynamic": "19.2.2",
+        "@angular/router": "19.2.2",
         "@fontsource/poppins": "5.2.5",
         "@fortawesome/angular-fontawesome": "1.0.0",
         "@fortawesome/fontawesome-svg-core": "6.7.2",
@@ -31,9 +31,9 @@
         "zone.js": "0.15.0"
     },
     "devDependencies": {
-        "@angular-devkit/build-angular": "17.2.3",
-        "@angular/cli": "17.3.3",
-        "@angular/compiler-cli": "17.3.2",
+        "@angular-devkit/build-angular": "19.2.2",
+        "@angular/cli": "19.2.2",
+        "@angular/compiler-cli": "19.2.2",
         "@types/jasmine": "5.1.7",
         "angular-cli-ghpages": "2.0.3",
         "jasmine-core": "5.6.0",
@@ -43,7 +43,7 @@
         "karma-jasmine": "5.1.0",
         "karma-jasmine-html-reporter": "2.1.0",
         "prettier": "3.5.3",
-        "typescript": "5.4.5"
+        "typescript": "5.8.2"
     },
     "engines": {
         "node": ">=18",
@@ -57,7 +57,10 @@
             "@fortawesome/free-brands-svg-icons",
             "@fortawesome/free-regular-svg-icons",
             "@fortawesome/free-solid-svg-icons",
+            "@parcel/watcher",
             "esbuild",
+            "lmdb",
+            "msgpackr-extract",
             "nice-napi"
         ]
     }

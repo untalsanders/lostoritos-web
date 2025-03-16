@@ -1,10 +1,9 @@
 import { Component } from '@angular/core'
-import { LogoSvgComponent } from '../logo-svg/logo-svg.component'
 
 @Component({
     selector: 'app-logo',
     standalone: true,
-    imports: [LogoSvgComponent],
+    imports: [],
     templateUrl: './logo.component.html',
     styleUrl: './logo.component.css',
 })
