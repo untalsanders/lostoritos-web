@@ -24,4 +24,4 @@ jobs:
         run: |
           npm install
           npm run build
-          npm run ng -- deploy --base-href=/realcoholicosfc/ --name="Sanders Gutiérrez" --email=ing.sanders@gmail.com
+          npm run ng -- deploy --no-nojekyll --base-href=/realcoholicosfc/ --name="Sanders Gutiérrez" --email=ing.sanders@gmail.com
