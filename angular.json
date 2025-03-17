@@ -79,7 +79,7 @@
                 "deploy": {
                     "builder": "angular-cli-ghpages:deploy",
                     "options": {
-                        "baseHref": "https://untalsanders.github.io/realcoholicosfc/",
+                        "baseHref": "/realcoholicosfc/",
                         "name": "Sanders Gutiérrez",
                         "email": "ing.sanders@gmail.com"
                     }
