@@ -1,26 +1,29 @@
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*gap: 1rem;*/
 
-    img {
-        width: 4rem;
+    /*img {*/
+    /*    width: 4rem;*/
+    /*}*/
+
+    .logo-title {
+        display: none;
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*    line-height: 1.4;*/
+
+    /*    span:first-child {*/
+    /*        font-size: 2rem;*/
+    /*        font-weight: 700;*/
+    /*    }*/
+
+    /*    small {*/
+    /*        font-weight: 300;*/
+    /*        color: #ccc;*/
+    /*        letter-spacing: 3px;*/
+    /*    }*/
     }
 }
 
-.logo-title {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.4;
 
-    span:first-child {
-        font-size: 2rem;
-        font-weight: 700;
-    }
-
-    small {
-        font-weight: 300;
-        color: #ccc;
-        letter-spacing: 3px;
-    }
-}
