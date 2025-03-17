@@ -22,6 +22,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          pnpm install
-          pnpm run build
-          pnpm run ng -- deploy --base-href=/realcoholicosfc/ --name="Sanders Gutiérrez" --email=ing.sanders@gmail.com
+          npm install
+          npm run build
+          npm run ng -- deploy --base-href=/realcoholicosfc/ --name="Sanders Gutiérrez" --email=ing.sanders@gmail.com
