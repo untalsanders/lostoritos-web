@@ -70,23 +70,47 @@ footer {
     background-color: #222;
     color: #ddd;
     padding: 3rem 0;
+}
 
-    .navbar-footer {
-        text-align: center;
-        display: grid;
-        grid-auto-flow: row;
-        gap: 1.5rem;
+.navbar-footer {
+    display: flex;
+    gap: 1rem;
+    flex-flow: row wrap;
+    text-align: center;
 
-        ul {
-            h3 {
-                color: white;
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
+    & > * {
+        flex: 1 auto;
+        width: min(50vw, 20rem);
+        padding: 2rem;
+
+        @media (width >= 51.25rem) {
+            &~*:nth-child(2n) {
+                border-left: 1px solid #333;
+            }
+        }
+
+        @media (width >= 77.5rem) {
+            &~*:not(:last-child) {
+                border-left: 1px solid #333;
             }
 
-            li {
-                padding: .25rem 0;
+            &~*:last-child {
+                border-left: none;
+
+                @media (width >= 103.75rem) {
+                    border-left: 1px solid #333;
+                }
             }
+        }
+
+        h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            padding: .25rem 0;
         }
     }
 }
