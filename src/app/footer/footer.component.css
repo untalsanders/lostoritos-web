@@ -6,61 +6,71 @@ footer {
 .social-media {
     background-color: #333;
     border-top: .25rem solid rgb(196, 135, 44);
-    color: #d4d4d4;
     padding: 3rem 0;
 
     .container {
+        display: flex;
+        flex-flow: row wrap;
+        flex: 1 33%;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        & > * {
+            flex: 1 auto;
+            width: min(50vw, 20rem);
+            padding: 2rem;
+            text-align: center;
+        }
+    }
+
+    .social-network {
         display: grid;
-        gap: 2.5rem;
+        place-items: center;
+        gap: 2rem;
 
-        .social-network {
-            display: grid;
-            place-items: center;
-            gap: 1rem;
-
-            h3 {
-                color: white;
-            }
-
-            ul {
-                display: flex;
-                gap: 1.5rem;
-
-                li {
-                    list-style: none;
-                    font-size: 1.5rem;
-                }
-            }
+        h3 {
+            color: white;
         }
 
-        .logo {
-            display: grid;
-            place-items: center;
-            text-align: center;
-            gap: 2rem;
+        ul {
+            display: flex;
+            gap: 1.5rem;
 
-            img {
-                background-color: #222;
-                box-shadow: 0px 0px 20px #000;
-                border-radius: 50%;
-                width: 4rem;
+            li {
+                list-style: none;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .logo {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        gap: 2rem;
+
+        img {
+            background-color: #222;
+            box-shadow: 0px 0px 20px #000;
+            border-radius: 50%;
+            width: 4rem;
+        }
+
+        .brand-text {
+            h3 {
+                font-weight: 900;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                background: linear-gradient(#eee, rgb(196, 135, 44));
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
 
-            .brand-text {
-                h3 {
-                    font-weight: 900;
-                    font-size: 1.5rem;
-                    text-transform: uppercase;
-                    background: linear-gradient(#eee, rgb(196, 135, 44));
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-
-                span {
-                    color: #aaa;
-                    letter-spacing: .05rem;
-                    font-weight: 300;
-                }
+            span {
+                color: #aaa;
+                letter-spacing: .05rem;
+                font-weight: 300;
             }
         }
     }
