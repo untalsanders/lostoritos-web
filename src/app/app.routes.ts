@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router'
-import { ContactComponent } from './contacto/contact.component'
-import { SociosComponent } from './socios/socios.component'
-import { ClubComponent } from './club/club.component'
-import { EquipoComponent } from './equipo/equipo.component'
+import { ContactComponent } from './contact/contact.component'
+import { NewsComponent } from './news/news.component'
+import { EquipoComponent } from './team/equipo.component'
 import { HomeComponent } from './home/home.component'
+import { MatchesComponent } from './matches/matches.component'
 
 export const routes: Routes = [
     {
@@ -12,12 +12,17 @@ export const routes: Routes = [
         component: HomeComponent,
     },
     {
-        path: 'club',
-        title: 'Club',
-        component: ClubComponent,
+        path: 'news',
+        title: 'Noticias',
+        component: NewsComponent,
     },
     {
-        path: 'equipo',
+        path: 'matches',
+        title: 'Partidos',
+        component: MatchesComponent,
+    },
+    {
+        path: 'team',
         title: 'Equipo',
         component: EquipoComponent,
     },
@@ -26,9 +31,4 @@ export const routes: Routes = [
         title: 'Contact Page',
         component: ContactComponent,
     },
-    {
-        path: 'socios',
-        title: 'Socios',
-        component: SociosComponent,
-    }
 ]
