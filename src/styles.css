@@ -54,3 +54,7 @@ li {
     width: clamp(calc(20rem - 2.5rem), 80vw, 90vw);
     margin: 0 auto;
 }
+
+.py-3 {
+    padding: 3rem 0;
+}

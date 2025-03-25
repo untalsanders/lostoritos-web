@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router'
 import { ContactComponent } from './contact/contact.component'
 import { NewsComponent } from './news/news.component'
-import { EquipoComponent } from './team/equipo.component'
+import { TeamComponent } from './team/team.component'
 import { HomeComponent } from './home/home.component'
 import { MatchesComponent } from './matches/matches.component'
 
@@ -24,7 +24,7 @@ export const routes: Routes = [
     {
         path: 'team',
         title: 'Equipo',
-        component: EquipoComponent,
+        component: TeamComponent,
     },
     {
         path: 'contact',
