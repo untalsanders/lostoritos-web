@@ -1,5 +1,4 @@
 import { Component } from '@angular/core'
-import { LogoSvgComponent } from '../logo-svg/logo-svg.component'
 import { NgOptimizedImage } from '@angular/common'
 
 @Component({
@@ -7,6 +6,6 @@ import { NgOptimizedImage } from '@angular/common'
     standalone: true,
     templateUrl: './logo.component.html',
     styleUrl: './logo.component.css',
-    imports: [LogoSvgComponent, NgOptimizedImage],
+    imports: [NgOptimizedImage],
 })
 export class LogoComponent {}
