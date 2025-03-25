@@ -11,7 +11,14 @@ import { RouterLink } from '@angular/router'
 })
 export class HeaderComponent {
     toggleMenu() {
-        const menu = document.getElementById('menu')
-        menu?.classList.toggle('hidden')
+        const menu = document.querySelector('.header__nav')
+        menu?.classList.toggle('header__nav--active')
+
+        const menuItem = document.querySelectorAll('.header__nav-item')
+        menuItem.forEach(item => {
+            item.addEventListener('click', () => {
+                menu?.classList.remove('header__nav--active')
+            })
+        })
     }
 }
