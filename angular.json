@@ -17,7 +17,13 @@
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": ["zone.js"],
-                        "assets": ["src/assets"],
+                        "assets": [
+                            {
+                                "glob": "**/*",
+                                "input": "src/assets",
+                                "output": "/assets"
+                            }
+                        ],
                         "styles": ["src/styles.css"],
                         "scripts": [],
                         "tsConfig": "tsconfig.app.json"
