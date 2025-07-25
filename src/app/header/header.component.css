@@ -22,12 +22,13 @@
         }
 
         img {
-            width: 2rem;
-            height: 2rem;
+            max-width: 3.125rem;
+            max-height: 3.125rem;
         }
 
         span {
             font-size: 1.2rem;
+            text-transform: uppercase;
         }
 
         small {
