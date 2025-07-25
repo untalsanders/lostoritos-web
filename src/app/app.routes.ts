@@ -4,6 +4,8 @@ import { NewsComponent } from './news/news.component'
 import { TeamComponent } from './team/team.component'
 import { HomeComponent } from './home/home.component'
 import { MatchesComponent } from './matches/matches.component'
+import { NavbarComponent } from './navbar/navbar.component'
+import { ClubComponent } from './club/club.component'
 
 export const routes: Routes = [
     {
@@ -12,9 +14,9 @@ export const routes: Routes = [
         component: HomeComponent,
     },
     {
-        path: 'news',
-        title: 'Noticias',
-        component: NewsComponent,
+        path: 'team',
+        title: 'Equipo',
+        component: TeamComponent,
     },
     {
         path: 'matches',
@@ -22,9 +24,14 @@ export const routes: Routes = [
         component: MatchesComponent,
     },
     {
-        path: 'team',
-        title: 'Equipo',
-        component: TeamComponent,
+        path: 'news',
+        title: 'Noticias',
+        component: NewsComponent,
+    },
+    {
+        path: 'club',
+        title: 'Club',
+        component: ClubComponent,
     },
     {
         path: 'contact',
