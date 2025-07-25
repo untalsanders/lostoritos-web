@@ -1,12 +1,12 @@
 .contact__hero {
     background-image: url('/assets/images/contact-us-hero-desktop.jpeg');
+    background-color: #931517;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100%;
     height: min(40vh, 30vh);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-content: center;
     font-size: clamp(1rem, 2vw, 2vw);
 
     & h2 {
