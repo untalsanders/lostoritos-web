@@ -1,29 +1,33 @@
-.logo {
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*gap: 1rem;*/
+:host {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
 
-    /*img {*/
-    /*    width: 4rem;*/
-    /*}*/
+.logo__image {
+    width: 3.125rem;
+    height: 3.125rem;
+}
 
-    .logo-title {
-        display: none;
-    /*    display: flex;*/
-    /*    flex-direction: column;*/
-    /*    line-height: 1.4;*/
+.logo__text {
+   display: flex;
+   flex-direction: column;
+   text-transform: uppercase;
 
-    /*    span:first-child {*/
-    /*        font-size: 2rem;*/
-    /*        font-weight: 700;*/
-    /*    }*/
-
-    /*    small {*/
-    /*        font-weight: 300;*/
-    /*        color: #ccc;*/
-    /*        letter-spacing: 3px;*/
-    /*    }*/
+    span:nth-child(1) {
+       font-size: 1.25rem;
+       font-weight: 700;
     }
+
+    span:nth-child(2) {
+       font-size: .75rem;
+       font-weight: 500;
+    }
+}
+
+.logo__text--display-none {
+    visibility: hidden;
+    /* display: none; */
 }
 
 

@@ -4,13 +4,13 @@ import { NewsComponent } from './news/news.component'
 import { TeamComponent } from './team/team.component'
 import { HomeComponent } from './home/home.component'
 import { MatchesComponent } from './matches/matches.component'
-import { NavbarComponent } from './navbar/navbar.component'
 import { ClubComponent } from './club/club.component'
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component'
 
 export const routes: Routes = [
     {
         path: '',
-        title: 'Home',
+        title: 'Inicio',
         component: HomeComponent,
     },
     {
@@ -35,7 +35,12 @@ export const routes: Routes = [
     },
     {
         path: 'contact',
-        title: 'Contact Page',
+        title: 'Contacto',
         component: ContactComponent,
+    },
+    {
+        path: 'legal-notice',
+        title: 'Aviso Legal',
+        component: LegalNoticeComponent,
     },
 ]
