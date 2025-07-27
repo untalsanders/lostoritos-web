@@ -1,23 +1,20 @@
 import { Component } from '@angular/core'
+import { RouterLink } from '@angular/router'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
-import { faFacebook, faInstagram, faThreads, faTiktok, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
-import { LogoSvgComponent } from '../logo-svg/logo-svg.component'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
-import { MobileAppsComponent } from '../mobile-apps/mobile-apps.component'
 
 @Component({
     selector: 'app-footer',
     standalone: true,
-    imports: [FontAwesomeModule, MobileAppsComponent],
+    imports: [RouterLink, FontAwesomeModule],
     templateUrl: './footer.component.html',
     styleUrl: './footer.component.css',
 })
 export class FooterComponent {
-    faTwitter = faTwitter
-    faInstagram = faInstagram
-    faYoutube = faYoutube
-    faFacebook = faFacebook
-    faTiktok = faTiktok
-    faThreads = faThreads
     faHeart = faHeart
+    currentDate: number
+
+    constructor() {
+        this.currentDate = new Date().getFullYear()
+    }
 }

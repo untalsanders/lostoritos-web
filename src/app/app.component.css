@@ -1,9 +1,5 @@
 :host {
-    min-height: 100vh;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
-}
-
-main {
-    background-color: rgb(232, 235, 238);
+    min-height: 100dvh;
 }
