@@ -1,97 +1,30 @@
-<footer>
-    <div class="social-media">
+<footer class="footer">
+    <!-- <div class="social-media">
         <div class="container">
             <div class="logo">
                 <img src="assets/images/logo_los_toritos.svg" alt="logo.svg">
                 <div class="brand-text">
-                    <h3>Real Cohólicos FC</h3>
-                    <span>Pasión desmedida por el guaro</span>
+                    <h3>Los Toritos</h3>
+                    <span>Pasión naranja desde 2007</span>
                 </div>
-            </div>
-            <div class="social-network">
-                <h3>Síguenos en nuestras redes</h3>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <fa-icon [icon]="faFacebook"></fa-icon>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <fa-icon [icon]="faTwitter"></fa-icon>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <fa-icon [icon]="faInstagram"></fa-icon>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <fa-icon [icon]="faYoutube"></fa-icon>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <fa-icon [icon]="faTiktok"></fa-icon>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <fa-icon [icon]="faThreads"></fa-icon>
-                        </a>
-                    </li>
-                </ul>
             </div>
             <app-mobile-apps></app-mobile-apps>
         </div>
     </div>
     <div class="sub-footer">
         <div class="container">
-            <nav class="navbar-footer">
-                <ul>
-                    <h3>Contacto</h3>
-                    <li>Galicia 1973, C1416</li>
-                    <li>+54 11 2345-6789</li>
-                    <li>info&#64;realcoholicosfc.com</li>
-                </ul>
-                <ul>
-                    <h3>Club</h3>
-                    <li><a href="#1">Noticias</a></li>
-                    <li><a href="#1">Historia</a></li>
-                    <li><a href="#2">Misión y Visión</a></li>
-                    <li><a href="#3">Himno</a></li>
-                    <li><a href="#3">Código de Ética</a></li>
-                    <li><a href="#4">Patrocinadores</a></li>
-                </ul>
-                <ul>
-                    <h3>Equipo</h3>
-                    <li><a href="#1">Actualidad</a></li>
-                    <li><a href="#1">Plantilla</a></li>
-                    <li><a href="#2">Calendario</a></li>
-                    <li><a href="#3">Clasificación</a></li>
-                    <li><a href="#3">Palmarés</a></li>
-                    <li><a href="#4">Fotos</a></li>
-                </ul>
-                <ul>
-                    <h3>Políticas</h3>
-                    <li><a href="#">Aviso Legal</a></li>
-                    <li><a href="#">Privacidad</a></li>
-                    <li><a href="#">Cookies</a></li>
-                </ul>
-            </nav>
+            <app-social-networks></app-social-networks>
+            <app-navbar></app-navbar>
         </div>
-    </div>
-    <div class="main-footer">
-        <div class="container">
-            <div class="copyright">
-                <em>Los Toritos FC</em> &copy; 2025 Todos los derechos reservados.
-            </div>
-            <div class="developed-by">
-                <small>
-                    Hecho con <fa-icon [icon]="faHeart"></fa-icon> por: <a href="https://untalsanders.com" target="_blank">UnTalSanders</a>
-                </small>
-            </div>
+    </div> -->
+    <div class="footer-one">
+        <div class="container footer-one__container">
+            <p>LOS TORITOS &copy; {{ currentDate }} Todos los derechos reservados.</p>
+            <nav class="footer-links">
+                <a class="footer-links__item" routerLink="legal-notice">Aviso Legal</a>
+                <a class="footer-links__item" routerLink="">Política de Privacidad</a>
+                <a class="footer-links__item" routerLink="">Política de Cookies</a>
+            </nav>
         </div>
     </div>
 </footer>
