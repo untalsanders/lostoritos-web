@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, signal } from '@angular/core'
 
 @Component({
     selector: 'app-legal-notice',
@@ -7,4 +7,6 @@ import { Component } from '@angular/core'
     templateUrl: './legal-notice.component.html',
     styleUrl: './legal-notice.component.css',
 })
-export class LegalNoticeComponent {}
+export class LegalNoticeComponent {
+    clubName = signal("LOS TORITOS")
+}
