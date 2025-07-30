@@ -128,6 +128,10 @@
     }
 }
 
+.copyright {
+    margin-block: unset;
+}
+
 .footer-links {
     display: flex;
     flex-direction: column;
