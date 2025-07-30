@@ -1,11 +1,12 @@
 @import 'fonts.css';
 
 :root {
+    --font-size: 1rem;
     font-family: 'Poppins', system-ui, sans-serif;
     line-height: 1.5;
     font-weight: 400;
     text-rendering: optimizeLegibility;
-    font-size: 1rem;
+    font-size: var(--font-size);
 }
 
 *,
@@ -23,6 +24,22 @@ html {
     overflow-y: scroll;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1lh;
+    margin-block: 1lh;
+}
+
+p {
+    line-height: 1lh;
+    margin-block: 1lh;
+}
+
 a {
     font-weight: 500;
     color: inherit;
@@ -35,14 +52,6 @@ img {
     height: auto;
     object-fit: cover;
     vertical-align: middle;
-}
-
-ul {
-    padding: 0;
-}
-
-li {
-    list-style: none;
 }
 
 .container {
