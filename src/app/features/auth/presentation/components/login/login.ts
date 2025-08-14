@@ -1,31 +1,32 @@
+import { AuthService } from '@/features/auth/application/services/auth.service'
 import { Component, inject } from '@angular/core'
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'
-import { RouterLink } from '@angular/router'
-import { AuthService } from '../application/services/auth.service'
+import { Router, RouterLink } from '@angular/router'
 
 @Component({
-  selector: 'app-register',
+  selector: 'app-login',
+  standalone: true,
   imports: [RouterLink, ReactiveFormsModule],
-  templateUrl: './register.html',
-  styleUrl: './register.css',
-  providers: [AuthService],
+  templateUrl: './login.html',
+  styleUrl: './login.css',
 })
-export class Register {
+export class Login {
   private _authService = inject(AuthService)
+  private _router = inject(Router)
 
-  registerForm = new FormGroup({
+  loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required, Validators.minLength(6)]),
   })
 
   async submit() {
     try {
-      if (this.registerForm.invalid) throw new Error('invalid form')
-      const { email, password } = this.registerForm.value
+      if (this.loginForm.invalid) throw new Error('invalid form')
+      const { email, password } = this.loginForm.value
       if (email && password) {
-        const authResponse = await this._authService.register({ email, password })
+        const authResponse = await this._authService.login({ email, password })
         if (authResponse.error) throw authResponse.error
-        alert('Su registro ha sido completado satisfactoriamente!')
+        this._router.navigateByUrl('/')
       }
     } catch (error) {
       console.error(error)
