@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router'
+import { privateGuard, publicGuard } from './core/guards/auth.guard'
+import { ClubComponent } from './features/club/club.component'
 import { ContactComponent } from './features/contact/contact.component'
+import { HomeComponent } from './features/home/home.component'
+import { LegalNoticeComponent } from './features/legal-notice/legal-notice.component'
+import { MatchesComponent } from './features/matches/matches.component'
 import { NewsComponent } from './features/news/news.component'
 import { TeamComponent } from './features/team/team.component'
-import { HomeComponent } from './features/home/home.component'
-import { MatchesComponent } from './features/matches/matches.component'
-import { ClubComponent } from './features/club/club.component'
-import { LegalNoticeComponent } from './features/legal-notice/legal-notice.component'
-import { loginGuard } from './core/guards/login.guard'
 import { Layout } from './shared/components/layout/layout'
 
 export const routes: Routes = [
@@ -23,7 +23,7 @@ export const routes: Routes = [
         path: 'team',
         title: 'Equipo',
         component: TeamComponent,
-        canActivate: [loginGuard],
+        canActivate: [privateGuard],
       },
       {
         path: 'matches',
@@ -54,6 +54,7 @@ export const routes: Routes = [
   },
   {
     path: 'auth',
+    canActivate: [publicGuard],
     loadChildren: () => import('./features/auth/auth.routes').then(m => m.AUTH_ROUTES),
   },
   {

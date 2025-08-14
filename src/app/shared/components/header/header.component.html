@@ -15,12 +15,15 @@
       </svg>
     </button>
 
-    <nav class="header__nav">
-      <a class="header__nav-item" routerLink="team">Equipo</a>
-      <a class="header__nav-item" routerLink="matches">Partidos</a>
-      <a class="header__nav-item" routerLink="news">Noticias</a>
-      <a class="header__nav-item" routerLink="club">Club</a>
-      <a class="header__nav-item" routerLink="contact">Contacto</a>
+    <nav class="header__nav gap-2">
+      <a class="header__nav-item rounded-lg" routerLink="team">Equipo</a>
+      <a class="header__nav-item rounded-lg" routerLink="matches">Partidos</a>
+      <a class="header__nav-item rounded-lg" routerLink="news">Noticias</a>
+      <a class="header__nav-item rounded-lg" routerLink="club">Club</a>
+      <a class="header__nav-item rounded-lg" routerLink="contact">Contacto</a>
+      <a class="header__nav-item rounded-lg" routerLink="/auth/login">Acceder</a>
+      <a class="header__nav-item rounded-lg bg-amber-600" routerLink="/auth/register">Registrar</a>
+      <button (click)="logout()" class="header__nav-item rounded-lg cursor-pointer bg-red-600 text-white">Cerrar sesión</button>
     </nav>
   </div>
 </header>

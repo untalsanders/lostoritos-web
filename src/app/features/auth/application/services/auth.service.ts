@@ -8,7 +8,15 @@ import { SignInWithPasswordCredentials, SignUpWithPasswordCredentials } from '@s
 export class AuthService {
   private _supabaseClient = inject(SupabaseService).supabaseClient
 
-  session() {}
+  constructor() {
+    this._supabaseClient.auth.onAuthStateChange(session => {
+      console.log(session)
+    })
+  }
+
+  session() {
+    return this._supabaseClient.auth.getSession()
+  }
 
   register(credentials: SignUpWithPasswordCredentials) {
     return this._supabaseClient.auth.signUp(credentials)

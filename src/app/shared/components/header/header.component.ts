@@ -1,5 +1,6 @@
-import { Component } from '@angular/core'
-import { RouterLink } from '@angular/router'
+import { AuthService } from '@/app/features/auth/application/services/auth.service'
+import { Component, inject } from '@angular/core'
+import { Router, RouterLink } from '@angular/router'
 import { LogoComponent } from '../logo/logo.component'
 
 @Component({
@@ -10,6 +11,14 @@ import { LogoComponent } from '../logo/logo.component'
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
+  private _authService = inject(AuthService)
+  private router = inject(Router)
+
+  async logout() {
+    await this._authService.logout()
+    this.router.navigateByUrl('/')
+  }
+
   toggleMenu() {
     const menu = document.querySelector('.header__nav')
     menu?.classList.toggle('header__nav--active')
