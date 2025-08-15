@@ -23,7 +23,6 @@ export const routes: Routes = [
         path: 'team',
         title: 'Equipo',
         component: TeamComponent,
-        canActivate: [privateGuard],
       },
       {
         path: 'matches',
@@ -56,6 +55,11 @@ export const routes: Routes = [
     path: 'auth',
     canActivate: [publicGuard],
     loadChildren: () => import('./features/auth/auth.routes').then(m => m.AUTH_ROUTES),
+  },
+  {
+    path: 'admin',
+    canActivate: [privateGuard],
+    loadChildren: () => import('./features/admin/admin.routes').then(m => m.ADMIN_ROUTES),
   },
   {
     path: '**',

@@ -7,9 +7,8 @@ const authService = () => inject(AuthService)
 
 export const privateGuard: CanActivateFn = async () => {
   const router = routerInjection()
-
   const { data } = await authService().session()
-  console.log(data)
+
   if (!data.session) {
     router.navigateByUrl('/auth/login')
   }
@@ -19,9 +18,8 @@ export const privateGuard: CanActivateFn = async () => {
 
 export const publicGuard = async () => {
   const router = routerInjection()
-
   const { data } = await authService().session()
-  console.log(data)
+
   if (data.session) {
     router.navigateByUrl('/')
   }

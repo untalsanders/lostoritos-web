@@ -21,6 +21,7 @@
 }
 
 .header__nav-item {
+  cursor: pointer;
   padding: 0.8rem 1rem;
 
   &:hover {

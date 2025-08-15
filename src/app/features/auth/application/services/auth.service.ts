@@ -8,12 +8,6 @@ import { SignInWithPasswordCredentials, SignUpWithPasswordCredentials } from '@s
 export class AuthService {
   private _supabaseClient = inject(SupabaseService).supabaseClient
 
-  constructor() {
-    this._supabaseClient.auth.onAuthStateChange(session => {
-      console.log(session)
-    })
-  }
-
   session() {
     return this._supabaseClient.auth.getSession()
   }
@@ -27,6 +21,6 @@ export class AuthService {
   }
 
   logout() {
-    return this._supabaseClient.auth.signOut()
+    return this._supabaseClient.auth.signOut({ scope: 'local' })
   }
 }

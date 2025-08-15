@@ -1,5 +1,5 @@
 import { AuthService } from '@/app/features/auth/application/services/auth.service'
-import { Component, inject } from '@angular/core'
+import { Component, inject, signal } from '@angular/core'
 import { Router, RouterLink } from '@angular/router'
 import { LogoComponent } from '../logo/logo.component'
 
@@ -11,11 +11,12 @@ import { LogoComponent } from '../logo/logo.component'
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  private _authService = inject(AuthService)
   private router = inject(Router)
+  private authService = inject(AuthService)
+  isAuthenticated = signal<boolean>(false)
 
   async logout() {
-    await this._authService.logout()
+    await this.authService.logout()
     this.router.navigateByUrl('/')
   }
 
