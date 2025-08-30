@@ -1,0 +1,4 @@
+.main {
+  overflow: auto;
+  transition: .3s;
+}

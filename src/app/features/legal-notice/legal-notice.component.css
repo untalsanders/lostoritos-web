@@ -1,0 +1,29 @@
+.hero {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: repeat;
+  background-image: url('/assets/images/bg-sub-header.png');
+  background-color: rgb(254, 235, 221);
+
+  height: min(300px, 20vh);
+  display: grid;
+  place-content: center;
+  font-size: clamp(1rem, 2vw, 2vw);
+}
+
+.title {
+  width: clamp(calc(20rem - 2.5rem), 80vw, 90vw);
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-position: outside;
+  margin-inline-start: 2.5rem;
+}
+
+li {
+  margin-block: 0.5lh;
+}
