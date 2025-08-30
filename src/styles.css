@@ -27,6 +27,22 @@
     border-color: var(--color-gray-200, currentColor);
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    line-height: 1lh;
+    margin-block: 1lh;
+  }
+
+  p {
+    line-height: 1lh;
+    margin-block: 1lh;
+  }
+
   :root {
     --background: #ffffff;
     --foreground: #0c1420;
