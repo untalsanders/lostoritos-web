@@ -1,0 +1,49 @@
+@import './assets/styles/fonts.css';
+
+@import 'tailwindcss';
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base);
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-*: initial;
+  --font-poppins: Poppins, system-ui, sans-serif;
+
+  --color-border: var(--border);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  :root {
+    --background: #ffffff;
+    --foreground: #0c1420;
+    --primary: #e11d48;
+    --primary-foreground: #ffffff;
+    --border: #e2e8f0;
+  }
+
+  .dark {
+    --background: #0a0a0a;
+    --foreground: #f2f2f2;
+    --border: #262626;
+  }
+}
+
+@supports selector(::-webkit-scrollbar) {
+  .supports-scrollbars\: pr-2 {
+    padding-right: 0.5rem;
+  }
+}

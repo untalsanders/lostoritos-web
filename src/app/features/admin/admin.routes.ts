@@ -6,11 +6,6 @@ export const ADMIN_ROUTES: Routes = [
   {
     path: '',
     component: AdminLayout,
-    children: [
-      {
-        path: '',
-        component: Dashboard,
-      },
-    ],
+    children: [{ path: '', component: Dashboard }],
   },
 ]

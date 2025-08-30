@@ -1,5 +1,4 @@
-:host {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  min-height: 100dvh;
+.main {
+  overflow: auto;
+  transition: .3s;
 }

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "realcoholicosfc": {
+    "lostoritos-web": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,19 +13,15 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser-esbuild",
           "options": {
-            "outputPath": "dist/realcoholicosfc",
+            "outputPath": "dist/lostoritos-web",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
             "assets": [
               "src/favicon.ico",
-              {
-                "glob": "**/*",
-                "input": "src/assets",
-                "output": "/assets"
-              }
+              "src/assets"
             ],
-            "styles": ["src/styles/globals.css"],
+            "styles": ["src/styles.css"],
             "scripts": [],
             "tsConfig": "tsconfig.app.json"
           },
@@ -59,10 +55,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "realcoholicosfc:build:production"
+              "buildTarget": "lostoritos-web:build:production"
             },
             "development": {
-              "buildTarget": "realcoholicosfc:build:development"
+              "buildTarget": "lostoritos-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -70,7 +66,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "realcoholicosfc:build"
+            "buildTarget": "lostoritos-web:build"
           }
         },
         "test": {
@@ -86,7 +82,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/realcoholicosfc/",
+            "baseHref": "/lostoritos-web/",
             "name": "Sanders Gutiérrez",
             "email": "ing.sanders@gmail.com"
           }
