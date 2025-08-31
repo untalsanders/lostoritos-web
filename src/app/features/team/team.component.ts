@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common'
 import { Component } from '@angular/core'
+import { Hero } from "@/app/shared/components/hero/hero";
 
 interface Player {
   id: number
@@ -12,7 +13,7 @@ interface Player {
 @Component({
   selector: 'app-team',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, Hero],
   templateUrl: './team.component.html',
   styleUrl: './team.component.css',
 })

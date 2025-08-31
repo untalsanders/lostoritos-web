@@ -3,7 +3,7 @@ import { privateGuard, publicGuard } from './core/guards/auth.guard'
 import { ClubComponent } from './features/club/club.component'
 import { ContactComponent } from './features/contact/contact.component'
 import { HomeComponent } from './features/home/home.component'
-import { LegalNoticeComponent } from './features/legal-notice/legal-notice.component'
+import { LegalNotice } from './pages/legal-notice/legal-notice'
 import { MatchesComponent } from './features/matches/matches.component'
 import { NewsComponent } from './features/news/news.component'
 import { TeamComponent } from './features/team/team.component'
@@ -20,7 +20,7 @@ export const routes: Routes = [
       { path: 'news', title: 'Noticias', component: NewsComponent },
       { path: 'club', title: 'Club', component: ClubComponent },
       { path: 'contact', title: 'Contacto', component: ContactComponent },
-      { path: 'legal-notice', title: 'Aviso Legal', component: LegalNoticeComponent },
+      { path: 'legal-notice', title: 'Aviso Legal', component: LegalNotice },
     ],
   },
   {

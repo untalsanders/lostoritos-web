@@ -38,15 +38,24 @@
     margin-block: 1lh;
   }
 
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
   p {
     line-height: 1lh;
-    margin-block: 1lh;
+    margin-block: .5lh;
   }
 
   :root {
     --background: #ffffff;
     --foreground: #0c1420;
-    --primary: #e11d48;
+    /* --primary: #e11d48; */
+    --primary: #FF6600;
     --primary-foreground: #ffffff;
     --border: #e2e8f0;
   }
