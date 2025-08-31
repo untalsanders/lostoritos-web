@@ -38,6 +38,14 @@
     margin-block: 1lh;
   }
 
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
   p {
     line-height: 1lh;
     margin-block: .5lh;
