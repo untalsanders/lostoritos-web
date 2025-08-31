@@ -4,9 +4,9 @@ import { Component, signal } from '@angular/core'
   selector: 'app-legal-notice',
   standalone: true,
   imports: [],
-  templateUrl: './legal-notice.component.html',
-  styleUrl: './legal-notice.component.css',
+  templateUrl: './legal-notice.html',
+  styleUrl: './legal-notice.css',
 })
-export class LegalNoticeComponent {
+export class LegalNotice {
   clubName = signal('LOS TORITOS')
 }
