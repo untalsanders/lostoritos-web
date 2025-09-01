@@ -1,0 +1,101 @@
+import { MenuItem } from '@/app/features/dashboard/application/domain/models/MenuItem'
+
+export class Menu {
+  public static items: MenuItem[] = [
+    {
+      group: 'Noticias',
+      separator: false,
+      items: [
+        {
+          icon: 'assets/icons/heroicons/outline/folder.svg',
+          label: 'Nueva entrada',
+          route: '/new post',
+        },
+        {
+          icon: 'assets/icons/heroicons/outline/folder.svg',
+          label: 'Todas',
+          route: '/posts',
+        },
+      ],
+    },
+    {
+      group: 'Club',
+      separator: false,
+      items: [
+        {
+          icon: 'assets/icons/heroicons/outline/folder.svg',
+          label: 'Historia',
+          route: '/players',
+        },
+        {
+          icon: 'assets/icons/heroicons/outline/folder.svg',
+          label: 'Valores',
+          route: '/values',
+        },
+        {
+          icon: 'assets/icons/heroicons/outline/folder.svg',
+          label: 'Palmarés',
+          route: '/palmares',
+        },
+        {
+          icon: 'assets/icons/heroicons/outline/folder.svg',
+          label: 'Peñas',
+          route: '/penas',
+        },
+      ],
+    },
+    {
+      group: 'Equipo',
+      separator: false,
+      items: [
+        {
+          icon: 'assets/icons/heroicons/outline/folder.svg',
+          label: 'Plantilla',
+          route: '/players',
+        },
+        {
+          icon: 'assets/icons/heroicons/outline/folder.svg',
+          label: 'Resultados',
+          route: '/results',
+        },
+        {
+          icon: 'assets/icons/heroicons/outline/folder.svg',
+          label: 'Clasificación',
+          route: '/tables',
+        },
+        {
+          icon: 'assets/icons/heroicons/outline/folder.svg',
+          label: 'Calendario',
+          route: '/matches',
+        },
+      ],
+    },
+    {
+      group: 'Socios',
+      separator: true,
+      items: [
+        {
+          icon: 'assets/icons/heroicons/outline/user-circle.svg',
+          label: 'Atención al socio',
+          route: '/meet-with-partner',
+        },
+      ],
+    },
+    {
+      group: 'Usuario',
+      separator: false,
+      items: [
+        {
+          icon: 'assets/icons/heroicons/outline/cog.svg',
+          label: 'Configuración',
+          route: '/settings',
+        },
+        {
+          icon: 'assets/icons/heroicons/outline/bell.svg',
+          label: 'Notificaciones',
+          route: '/notifications',
+        },
+      ],
+    },
+  ]
+}
