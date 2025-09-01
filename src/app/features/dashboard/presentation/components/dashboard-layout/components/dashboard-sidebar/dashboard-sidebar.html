@@ -1,0 +1,29 @@
+<aside class="bg-background hidden h-full flex-col justify-between transition-all duration-300 lg:flex">
+  <div class="overflow-hidden">
+    <!-- Logo -->
+    <div [ngClass]="menuService.showSidebar ? 'justify-between' : 'justify-center'"
+      class="flex items-center h-[3.125rem] border-b px-5">
+      @if (menuService.showSidebar) {
+      <div class="flex items-center">
+        <a (click)="toggleSidebar()"
+          class="inline-flex items-center title-font font-medium text-gray-900 cursor-pointer">
+          <img class="h-7.5 w-7.5" ngSrc="assets/images/logo_los_toritos.svg" alt="logo_los_toritos.svg" width="40"
+            height="40" />
+          <span class="ml-3 text-base font-semibold">LOS TORITOS</span>
+        </a>
+      </div>
+      }
+      <button (click)="toggleSidebar()"
+        class="text-muted-foreground/50 hover:text-muted-foreground flex items-center justify-center rounded-md p-2 transition-all duration-200 focus:outline-hidden"
+        [ngClass]="{ 'rotate-180': !menuService.showSidebar }">
+        <svg-icon src="assets/icons/heroicons/solid/chevron-double-left.svg"></svg-icon>
+      </button>
+    </div>
+
+    <!-- Menu Items -->
+    <div
+      class="scrollbar-thumb--sm scrollbar-track-rounded scrollbar-thin scrollbar-track-transparent scrollbar-thumb-card h-full overflow-auto px-4">
+      <!-- <app-sidebar-menu></app-sidebar-menu> -->
+    </div>
+  </div>
+</aside>
