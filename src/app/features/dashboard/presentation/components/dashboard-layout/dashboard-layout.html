@@ -1,0 +1,41 @@
+<!-- <div class="h-dvh grid grid-rows-[min-content_auto_min-content] grid-cols-[w-80_auto]"> -->
+
+<!-- Navbar -->
+<header id="navbar" class="border-b col-start-2 col-end-3 h-[3.125rem] flex items-center px-5">
+  <span class="">Navbar</span>
+</header>
+<!-- End of the Navbar -->
+
+<!-- Sidebar -->
+<aside class="border-r row-start-1 row-end-4 col-start-1 col-end-2">
+  <!-- Logo -->
+  <div>
+    <a routerLink="/dashboard" class="inline-flex items-center title-font font-medium text-gray-900 cursor-pointer">
+      <img class="h-10 w-10" ngSrc="assets/images/logo_los_toritos.svg" alt="logo_los_toritos.svg" width="40"
+        height="40" />
+      <span class="ml-3 text-xl">LOS TORITOS</span>
+    </a>
+  </div>
+</aside>
+<!-- End of the Sidebar -->
+
+<!-- Main Content -->
+<main id="main-content" class="col-start-2 col-end-2 grid place-items-center">
+  Content Admin dashboard
+</main>
+<!-- End of the Main Content -->
+
+<!-- Footer -->
+<footer class="px-5 flex w-full items-center justify-between font-medium border-t col-2 py-4 text-[.75rem] text-gray-500">
+  <div class="">
+    &copy; {{year}} LOS TORITOS
+  </div>
+  <ul class="flex">
+    <li class="hover:text-primary"><a routerLink="/legal-notice" class="px-2 cursor-pointer">Aviso Legal</a></li>
+    <li class="hover:text-primary"><a routerLink="/privacy-policy" class="px-2 cursor-pointer">Políticas de Privacidad</a></li>
+    <li class="hover:text-primary"><a routerLink="/cookies-policy" class="px-2 cursor-pointer">Políticas de Cookies</a></li>
+  </ul>
+</footer>
+<!-- End of the Footer -->
+
+<!-- </div> -->

@@ -1,0 +1,6 @@
+:host {
+  display: grid;
+  grid-template-columns: min(20rem, 100%) 1fr;
+  grid-template-rows: auto 1fr auto;
+  @apply h-screen overflow-hidden;
+}

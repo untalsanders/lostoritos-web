@@ -48,15 +48,15 @@
 
   p {
     line-height: 1lh;
-    margin-block: .5lh;
+    margin-block: 0.5lh;
   }
 
   :root {
-    --background: #ffffff;
+    --background: #fff;
     --foreground: #0c1420;
     /* --primary: #e11d48; */
-    --primary: #FF6600;
-    --primary-foreground: #ffffff;
+    --primary: #f60;
+    --primary-foreground: #fff;
     --border: #e2e8f0;
   }
 
