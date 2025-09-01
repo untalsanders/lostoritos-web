@@ -1,0 +1,61 @@
+<!-- Profile menu -->
+<div class="relative ml-3">
+  <!-- Profile Button -->
+  <button type="button" (click)="toggleMenu()" class="flex rounded-full text-sm focus:ring-4 focus:ring-gray-300"
+    aria-expanded="false" data-dropdown-toggle="dropdown">
+    <span class="sr-only">Open user menu</span>
+    <img src="https://avatars.githubusercontent.com/u/2822437?v=4" class="size-9 shrink-0 rounded-full" alt="">
+  </button>
+
+  <!-- Dropdown -->
+  @if (isOpen()) {
+  <div animate.enter="my-animation"
+    class="bg-background shadow-custom border-muted absolute z-20 mt-2 w-60 origin-top-right transform rounded-md border border-dashed py-4 ring-1 ring-transparent ring-opacity-5 transition focus:outline-hidden right-0">
+    <div class="flex items-center px-4 pb-4">
+      <div class="w-10 shrink-0">
+        <img src="https://avatars.githubusercontent.com/u/2822437?v=4" alt="" class="rounded-md">
+      </div>
+      <div class="text-foreground overflow-hidden px-2 text-sm font-semibold">
+        Sanders Gutiérrez
+        <p class="text-muted-foreground truncate text-ellipsis text-xs font-semibold">me&#64;lostorios.net</p>
+      </div>
+    </div>
+
+    <div class="border-border border-b border-dashed"></div>
+
+    <ul class="my-2 mx-2 flex flex-col">
+      <li
+        class="hover:text-primary inline-flex cursor-pointer items-center gap-2 rounded-md px-2 py-2 text-xs font-semibold">
+        <fa-icon [icon]="['fas', 'user-circle']" size="xl" class="mr-1 text-muted-foreground"></fa-icon>
+        Your Profile
+      </li>
+      <li
+        class="hover:text-primary inline-flex cursor-pointer items-center gap-2 rounded-md px-2 py-2 text-xs font-semibold">
+        <fa-icon [icon]="['fas', 'gear']" size="xl" class="mr-1 text-muted-foreground"></fa-icon>
+        Settings
+      </li>
+      <li
+        class="hover:text-primary inline-flex cursor-pointer items-center gap-2 rounded-md px-2 py-2 text-xs font-semibold">
+        <fa-icon [icon]="['fas', 'sign-out']" size="xl" class="mr-1 text-muted-foreground"></fa-icon>
+        Logout
+      </li>
+    </ul>
+
+    <hr class="border-border border-dashed" />
+
+    <div class="mx-4 my2">
+      <span class="text-foreground text-xs font-semibold">Modo</span>
+      <div class="mt-2 grid grid-cols-2 gap-2">
+        @for (mode of themeMode; track $index) {
+        <div :key="$index" (click)="toggleThemeMode()"
+          [ngClass]="{ 'border-muted-foreground/30 bg-card': mode == this.themeService.theme().mode }"
+          class="focus-visible:ring-ring border-border bg-background text-muted-foreground hover:bg-card hover:text-foreground shadow-xs inline-flex h-8 cursor-pointer items-center justify-start space-x-2 whitespace-nowrap rounded-md border border-dashed px-3 text-xs font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50">
+          <fa-icon [icon]="['fas', mode == 'light' ? 'sun' : 'moon']"></fa-icon>
+          <p class="uppercase">{{ mode }}</p>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+  }
+</div>
