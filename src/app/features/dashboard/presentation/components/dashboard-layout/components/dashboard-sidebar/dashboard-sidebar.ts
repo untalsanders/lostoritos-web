@@ -1,19 +1,20 @@
 import { MenuService } from '@/app/features/dashboard/application/services/menu.services'
-import { NgClass, NgOptimizedImage } from '@angular/common'
-import { Component } from '@angular/core'
-import { SvgIconComponent } from 'angular-svg-icon'
+import { Component, signal } from '@angular/core'
+import { SidebarHeader } from './sidebar-header/sidebar-header'
 import { SidebarMenu } from './sidebar-menu/sidebar-menu'
 
 @Component({
   selector: 'app-dashboard-sidebar',
-  imports: [NgOptimizedImage, SvgIconComponent, NgClass, SidebarMenu],
+  imports: [SidebarHeader, SidebarMenu],
   templateUrl: './dashboard-sidebar.html',
   styleUrl: './dashboard-sidebar.css',
 })
 export class DashboardSidebar {
+  showSidebar = signal(true)
+
   constructor(public readonly menuService: MenuService) {}
 
   toggleSidebar() {
-    this.menuService.toggleSidebar()
+    this.showSidebar.set(!this.showSidebar())
   }
 }
