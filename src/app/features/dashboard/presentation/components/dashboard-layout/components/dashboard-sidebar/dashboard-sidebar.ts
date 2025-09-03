@@ -1,4 +1,3 @@
-import { MenuService } from '@/app/features/dashboard/application/services/menu.services'
 import { Component, signal } from '@angular/core'
 import { SidebarHeader } from './sidebar-header/sidebar-header'
 import { SidebarMenu } from './sidebar-menu/sidebar-menu'
@@ -11,8 +10,6 @@ import { SidebarMenu } from './sidebar-menu/sidebar-menu'
 })
 export class DashboardSidebar {
   showSidebar = signal(true)
-
-  constructor(public readonly menuService: MenuService) {}
 
   toggleSidebar() {
     this.showSidebar.set(!this.showSidebar())

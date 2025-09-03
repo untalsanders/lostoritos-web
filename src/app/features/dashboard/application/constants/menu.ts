@@ -1,7 +1,7 @@
-import { MenuItem } from '@/app/features/dashboard/application/domain/models/MenuItem'
+import { MenuItem2 } from '@/app/features/dashboard/application/domain/models/MenuItem2'
 
 export class Menu {
-  public static items: MenuItem[] = [
+  public static items: MenuItem2[] = [
     {
       group: 'Noticias',
       separator: false,

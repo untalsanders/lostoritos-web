@@ -1,84 +1,36 @@
-@for (item of menuService.menuItems; track $index) {
-  @if (menuService.showSidebar) {
-    <div class="mx-1 flex items-center justify-between py-3">
-      <small [ngClass]="{ hidden: !menuService.showSidebar }" class="text-muted-foreground/50 text-xs font-semibold">
-        {{ item.group }}
+@for (menu of menus(); track $index) {
+  <!-- Group Menu -->
+  @if (showSidebar()) {
+    <div class="px-5 py-3 flex items-center justify-between">
+      <small [ngClass]="{ hidden: !showSidebar() }" class="py-2 text-muted-foreground/70 text-xs font-semibold">
+        {{ menu.group }}
       </small>
     </div>
   }
-  <ul class="flex flex-col">
-    <!-- List items -->
-    @for (item of item.items; track $index) {
-      <li>
-        <!-- Menu List -->
-        <div (click)="toggleMenu(item)" [ngClass]="{
-                'hover:bg-primary/10': !menuService.showSidebar && item.active,
-                'hover:bg-card/50': !menuService.showSidebar
-              }"
+
+  <ul class="flex flex-col px-3">
+    @for (item of menu.items; track $index) {
+      <!-- Menu Item -->
+      <li class="flex items-center py-2">
+        <div
           class="text-muted-foreground hover:text-foreground group relative flex grow items-center gap-4 rounded-lg px-2">
           <!-- Icon -->
-          <div [ngClass]="item.active && !menuService.showSidebar ? 'text-primary' : 'text-muted-foreground/50'">
-            <svg-icon src="{{ item.icon }}" [svgClass]="'h-5 w-5'"> </svg-icon>
+          <div>
+            <svg-icon src="{{ item.icon }}" [svgClass]="'h-5 w-5'"></svg-icon>
           </div>
-
-          <!-- Condition -->
-          <ng-container [ngTemplateOutlet]="item.children ? childMenu : parentMenu"
-            [ngTemplateOutletContext]="{ item: item }">
-          </ng-container>
-
-          <!-- Workaround:: Enable routerLink -->
-          <ng-template #parentMenu let-item="item">
-            <div routerLink="{{ item.route }}"
-              class="text-muted-foreground hover:text-primary flex h-[36px] cursor-pointer items-center justify-start rounded-sm">
-              <a [ngClass]="{ hidden: !menuService.showSidebar }" routerLinkActive="text-primary"
-                class="truncate text-xs font-semibold tracking-wide focus:outline-hidden">
-                {{ item.label }}
-              </a>
-            </div>
-          </ng-template>
-
-          <!-- Workaround:: Disable routerLink -->
-          <ng-template #childMenu let-item="item">
-            <div class="flex h-9 grow cursor-pointer items-center justify-start rounded-sm">
-              <a [ngClass]="{ hidden: !menuService.showSidebar }"
-                class="text-muted-foreground group-hover:text-primary truncate text-xs font-semibold tracking-wide focus:outline-hidden">
-                {{ item.label }}
-              </a>
-            </div>
-          </ng-template>
-
-          <!-- Arrow Icon -->
-          @if (item.children) {
-            <button [ngClass]="{ hidden: !menuService.showSidebar }"
-              class="text-foreground/50 flex cursor-pointer items-center justify-end p-0 transition-all duration-500 ltr:right-0 rtl:left-0">
-              @if(!item.expanded) {
-                <svg-icon src="assets/icons/heroicons/outline/plus.svg" svgClass="h-4 w-4"> </svg-icon>
-              } @else {
-                <svg-icon src="assets/icons/heroicons/outline/minus.svg" svgClass="h-4 w-4"> </svg-icon>
-              }
-            </button>
-          }
-
-          <!-- Tooltip -->
-          @if (!menuService.showSidebar) {
-            <div class="z-1 fixed h-[36px]">
-              <span
-                class="z-1 bg-foreground text-background absolute w-auto min-w-max translate-y-[2px] scale-0 rounded-md p-2 text-xs font-bold shadow-md transition-all duration-200 group-hover:scale-100 ltr:origin-left ltr:translate-x-10 rtl:origin-right rtl:-translate-x-10">
-                {{ item.label }}
-              </span>
-            </div>
-          }
+          <!-- Label -->
+          <a routerLink="{{ `/dashboard/${item.route}` }}" class="truncate text-xs font-semibold tracking-wide focus:outline-hidden">
+            {{ item.label }}
+          </a>
         </div>
-
-        <!-- Submenu items -->
-        <!-- <app-sidebar-submenu [submenu]="item"></app-sidebar-submenu> -->
       </li>
     }
   </ul>
 
-  @if (item.separator) {
-    <div class="py-3">
-      <hr class="border-border border-dashed" />
+  <!-- Separator -->
+  @if (menu.separator) {
+    <div class="pt-5">
+      <hr class="border-border border-dashed">
     </div>
   }
 }

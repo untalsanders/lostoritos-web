@@ -5,7 +5,6 @@ import { DashboardSidebar } from './components/dashboard-sidebar/dashboard-sideb
 
 @Component({
   selector: 'app-dashboard-layout',
-  standalone: true,
   imports: [DashboardFooter, DashboardNavbar, DashboardSidebar],
   templateUrl: './dashboard-layout.html',
   styleUrl: './dashboard-layout.css',

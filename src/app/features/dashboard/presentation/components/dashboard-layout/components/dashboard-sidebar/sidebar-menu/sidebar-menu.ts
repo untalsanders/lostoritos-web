@@ -1,20 +1,27 @@
-import { SubMenuItem } from '@/app/features/dashboard/application/domain/models/SubMenuItem'
+import { MenuItem } from '@/app/features/dashboard/application/domain/models/MenuItem'
 import { MenuService } from '@/app/features/dashboard/application/services/menu.services'
-import { CommonModule, NgClass, NgTemplateOutlet } from '@angular/common'
-import { Component } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { Component, inject, signal } from '@angular/core'
 import { RouterLink } from '@angular/router'
 import { SvgIconComponent } from 'angular-svg-icon'
 
 @Component({
   selector: 'app-sidebar-menu',
-  imports: [NgClass, SvgIconComponent, NgTemplateOutlet, RouterLink, CommonModule],
+  imports: [CommonModule, SvgIconComponent, RouterLink],
   templateUrl: './sidebar-menu.html',
   styleUrl: './sidebar-menu.css',
 })
 export class SidebarMenu {
-  constructor(public readonly menuService: MenuService) {}
+  showSidebar = signal(true)
+  menus = signal<MenuItem[]>([])
 
-  toggleMenu(subMenu: SubMenuItem) {
-    this.menuService.toggleMenu(subMenu)
+  private menuService = inject(MenuService)
+
+  constructor() {
+    this.menus.set(this.menuService.getItems())
+  }
+
+  toggelSidebar() {
+    this.showSidebar.set(!this.showSidebar())
   }
 }
