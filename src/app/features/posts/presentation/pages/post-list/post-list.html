@@ -1,0 +1,20 @@
+<app-hero heroTitle="Noticias" />
+
+<div class="container mx-auto py-16">
+  <section class="text-gray-600 body-font mx-5">
+    <h3 class="leading-none font-black text-3xl mb-5">Últimas Noticias</h3>
+
+    <div class="articles">
+      @for (postData of posts; track postData.slug) {
+        <app-post-preview [post]="postData"></app-post-preview>
+      }
+    </div>
+
+    <div class="flex items-center justify-center mt-6">
+      <a routerLink="news"
+        class="bg-primary text-white font-medium cursor-pointer rounded-[50%] p-5 inline-flex items-center hover:bg-primary/90">
+        <fa-icon [icon]="['fas', 'arrow-down']" size="xl"></fa-icon>
+      </a>
+    </div>
+  </section>
+</div>
