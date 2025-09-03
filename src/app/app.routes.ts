@@ -29,9 +29,9 @@ export const routes: Routes = [
     loadChildren: () => import('./features/auth/auth.routes').then(m => m.AUTH_ROUTES),
   },
   {
-    path: 'admin',
-    canActivate: [privateGuard],
-    loadChildren: () => import('./features/admin/admin.routes').then(m => m.ADMIN_ROUTES),
+    path: 'dashboard',
+    // canActivate: [privateGuard],
+    loadChildren: () => import('./features/dashboard/dashboard.routes').then(m => m.DASHBOARD_ROUTES),
   },
   {
     path: 'errors',

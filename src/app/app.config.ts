@@ -1,9 +1,10 @@
+import { provideHttpClient, withFetch, withInterceptorsFromDi } from '@angular/common/http'
 import { ApplicationConfig } from '@angular/core'
+import {} from '@angular/platform-browser'
 import { provideRouter } from '@angular/router'
-import { routes } from './app.routes'
 import { provideAngularSvgIcon } from 'angular-svg-icon'
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
+import { routes } from './app.routes'
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideAngularSvgIcon(), provideHttpClient(withInterceptorsFromDi())],
+  providers: [provideRouter(routes), provideAngularSvgIcon(), provideHttpClient(withFetch(), withInterceptorsFromDi())],
 }

@@ -16,6 +16,14 @@
 
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --shadow-custom: 0px 0px 50px 0px rgb(82 63 105 / 15%);
 }
 
 @layer base {
@@ -48,22 +56,31 @@
 
   p {
     line-height: 1lh;
-    margin-block: .5lh;
+    margin-block: 0.5lh;
   }
 
   :root {
-    --background: #ffffff;
+    --background: #fff;
     --foreground: #0c1420;
-    /* --primary: #e11d48; */
-    --primary: #FF6600;
-    --primary-foreground: #ffffff;
+    --primary: #f60;
+    --primary-foreground: #fff;
     --border: #e2e8f0;
+    --muted: #cfd9e5;
+    --muted-foreground: #64748b;
+
+    --card: #f1f5f9;
+    --card-foreground: #000000;
   }
 
   .dark {
     --background: #0a0a0a;
     --foreground: #f2f2f2;
     --border: #262626;
+    --muted: #262626;
+    --muted-foreground: #a3a3a3;
+
+    --card: #121212;
+    --card-foreground: #262626;
   }
 }
 

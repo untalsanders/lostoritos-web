@@ -1,0 +1,36 @@
+@for (menu of menus(); track $index) {
+  <!-- Group Menu -->
+  @if (showSidebar()) {
+    <div class="px-5 py-3 flex items-center justify-between">
+      <small [ngClass]="{ hidden: !showSidebar() }" class="py-2 text-muted-foreground/70 text-xs font-semibold">
+        {{ menu.group }}
+      </small>
+    </div>
+  }
+
+  <ul class="flex flex-col px-3">
+    @for (item of menu.items; track $index) {
+      <!-- Menu Item -->
+      <li class="flex items-center py-2">
+        <div
+          class="text-muted-foreground hover:text-foreground group relative flex grow items-center gap-4 rounded-lg px-2">
+          <!-- Icon -->
+          <div>
+            <svg-icon src="{{ item.icon }}" [svgClass]="'h-5 w-5'"></svg-icon>
+          </div>
+          <!-- Label -->
+          <a routerLink="{{ `/dashboard/${item.route}` }}" class="truncate text-xs font-semibold tracking-wide focus:outline-hidden">
+            {{ item.label }}
+          </a>
+        </div>
+      </li>
+    }
+  </ul>
+
+  <!-- Separator -->
+  @if (menu.separator) {
+    <div class="pt-5">
+      <hr class="border-border border-dashed">
+    </div>
+  }
+}
