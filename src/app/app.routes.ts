@@ -23,7 +23,12 @@ export const routes: Routes = [
       },
       { path: 'club', title: 'Club', component: ClubComponent },
       { path: 'contact', title: 'Contacto', component: ContactComponent },
-      { path: 'legal-notice', title: 'Aviso Legal', component: LegalNotice },
+      {
+        path: 'legal',
+        children: [
+          { path: 'notice', title: 'Aviso Legal', component: LegalNotice },
+        ],
+      },
     ],
   },
   {
