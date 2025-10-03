@@ -5,7 +5,6 @@ import { ContactComponent } from './features/contact/contact.component'
 import { HomeComponent } from './features/home/home.component'
 import { MatchesComponent } from './features/matches/matches.component'
 import { TeamComponent } from './features/team/team.component'
-import { LegalNotice } from './pages/legal-notice/legal-notice'
 import { Layout } from './shared/components/layout/layout'
 
 export const routes: Routes = [
@@ -25,11 +24,15 @@ export const routes: Routes = [
       { path: 'contact', title: 'Contacto', component: ContactComponent },
       {
         path: 'legal',
-        children: [
-          { path: 'notice', title: 'Aviso Legal', component: LegalNotice },
-        ],
+        title: 'Legal',
+        loadChildren: () => import('./pages/legal/legal.routes').then(m => m.LEGAL_ROUTES),
       },
     ],
+  },
+  {
+    path: 'settings',
+    component: Layout,
+    children: [{ path: 'account', component: HomeComponent }],
   },
   {
     path: 'auth',
