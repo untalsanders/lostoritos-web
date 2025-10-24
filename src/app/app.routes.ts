@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router'
-import { privateGuard, publicGuard } from './core/guards/auth.guard'
-import { ClubComponent } from './features/club/club.component'
+import { publicGuard } from './core/guards/auth.guard'
 import { ContactComponent } from './features/contact/contact.component'
 import { HomeComponent } from './features/home/home.component'
 import { MatchesComponent } from './features/matches/matches.component'
@@ -13,14 +12,18 @@ export const routes: Routes = [
     component: Layout,
     children: [
       { path: '', title: 'Inicio', component: HomeComponent },
-      { path: 'team', title: 'Equipo', component: TeamComponent },
-      { path: 'matches', title: 'Partidos', component: MatchesComponent },
       {
         path: 'news',
         title: 'Noticias',
         loadChildren: () => import('./features/posts/posts.routes').then(m => m.POSTS_ROUTES),
       },
-      { path: 'club', title: 'Club', component: ClubComponent },
+      {
+        path: 'club',
+        title: 'Club',
+        loadChildren: () => import('./features/club/club.routes').then(m => m.CLUB_ROUTES),
+      },
+      { path: 'team', title: 'Equipo', component: TeamComponent },
+      { path: 'matches', title: 'Partidos', component: MatchesComponent },
       { path: 'contact', title: 'Contacto', component: ContactComponent },
       {
         path: 'legal',
