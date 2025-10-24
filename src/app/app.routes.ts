@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router'
-import { publicGuard } from './core/guards/auth.guard'
+import { privateGuard, publicGuard } from './core/guards/auth.guard'
 import { ClubComponent } from './features/club/club.component'
 import { ContactComponent } from './features/contact/contact.component'
 import { HomeComponent } from './features/home/home.component'
@@ -30,19 +30,13 @@ export const routes: Routes = [
     ],
   },
   {
-    path: 'settings',
-    component: Layout,
-    children: [{ path: 'account', component: HomeComponent }],
+    path: 'admin',
+    loadChildren: () => import('./features/dashboard/dashboard.routes').then(m => m.DASHBOARD_ROUTES),
   },
   {
     path: 'auth',
     canActivate: [publicGuard],
     loadChildren: () => import('./features/auth/auth.routes').then(m => m.AUTH_ROUTES),
-  },
-  {
-    path: 'dashboard',
-    // canActivate: [privateGuard],
-    loadChildren: () => import('./features/dashboard/dashboard.routes').then(m => m.DASHBOARD_ROUTES),
   },
   {
     path: 'errors',
