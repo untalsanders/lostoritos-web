@@ -4,7 +4,6 @@ import { ClubHistoryPage } from './presentation/pages/history/history'
 import { ClubPalmaresPage } from './presentation/pages/palmares/palmares'
 import { ClubPenasPage } from './presentation/pages/penas/penas'
 import { ClubSponsorsPage } from './presentation/pages/sponsors/sponsors'
-import { ClubValuesPage } from './presentation/pages/values/values'
 
 export const CLUB_ROUTES: Routes = [
   {
@@ -12,7 +11,6 @@ export const CLUB_ROUTES: Routes = [
     children: [
       { path: 'foundation', component: ClubFoundationPage },
       { path: 'history', component: ClubHistoryPage },
-      { path: 'values', component: ClubValuesPage },
       { path: 'palmares', component: ClubPalmaresPage },
       { path: 'sponsors', component: ClubSponsorsPage },
       { path: 'penas', component: ClubPenasPage },

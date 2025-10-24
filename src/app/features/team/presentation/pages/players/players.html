@@ -1,0 +1,21 @@
+<app-hero heroTitle="Primer Equipo" />
+
+<div class="team-grid container mx-auto px-5 py-16">
+  @for (position of positions; track position) {
+    <div class="position-group">
+      <h1 class="py-2">{{ position }}</h1>
+      <div class="players-container">
+        @for (player of playersByPosition.get(position); track player.id) {
+          <div class="player-card">
+            <img [src]="player.image" [alt]="player.name" />
+            <div class="player-info">
+              <p class="player-dorsal">{{ player.dorsal }}</p>
+              <span class="player-name">{{ player.name }}</span>
+              <span class="player-position">{{ player.position }}</span>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>

@@ -3,7 +3,6 @@ import { publicGuard } from './core/guards/auth.guard'
 import { ContactComponent } from './features/contact/contact.component'
 import { HomeComponent } from './features/home/home.component'
 import { MatchesComponent } from './features/matches/matches.component'
-import { TeamComponent } from './features/team/team.component'
 import { Layout } from './shared/components/layout/layout'
 
 export const routes: Routes = [
@@ -22,7 +21,11 @@ export const routes: Routes = [
         title: 'Club',
         loadChildren: () => import('./features/club/club.routes').then(m => m.CLUB_ROUTES),
       },
-      { path: 'team', title: 'Equipo', component: TeamComponent },
+      {
+        path: 'team',
+        title: 'Equipo',
+        loadChildren: () => import('./features/team/team.routes').then(m => m.TEAM_ROUTES),
+      },
       { path: 'matches', title: 'Partidos', component: MatchesComponent },
       { path: 'contact', title: 'Contacto', component: ContactComponent },
       {
