@@ -7,6 +7,6 @@ import { Component, signal } from '@angular/core'
   templateUrl: './legal-notice.html',
   styleUrl: './legal-notice.css',
 })
-export class LegalNotice {
+export class LegalNoticePage {
   clubName = signal('LOS TORITOS')
 }

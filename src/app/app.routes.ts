@@ -25,7 +25,7 @@ export const routes: Routes = [
       {
         path: 'legal',
         title: 'Legal',
-        loadChildren: () => import('./pages/legal/legal.routes').then(m => m.LEGAL_ROUTES),
+        loadChildren: () => import('./features/legal/legal.routes').then(m => m.LEGAL_ROUTES),
       },
     ],
   },
