@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router'
-import { LegalNoticePage } from './legal-notice/legal-notice'
-import { LegalPrivatePolicyPage } from './legal-private-policy/legal-private-policy'
+import { LegalNoticePage } from './presentation/pages/legal-notice/legal-notice'
+import { LegalPrivatePolicyPage } from './presentation/pages/legal-private-policy/legal-private-policy'
 
 export const LEGAL_ROUTES: Routes = [
   {
