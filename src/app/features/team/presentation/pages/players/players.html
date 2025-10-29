@@ -4,7 +4,7 @@
   <div class="players-container">
     @for (player of players(); track player.id ) {
       <div class="player-card">
-        <img src="assets/images/player-default-268x357.jpg" [alt]=`${player.firstName}_${player.firstName}` />
+        <img src="assets/images/player-default-268x357.jpg" [alt]=`${player.firstName}_${player.lastName}` />
         <div class="player-info">
           <p class="player-dorsal">{{ player.dorsal }}</p>
           <span class="player-name">{{ player.firstName.split(" ")[0] }} {{ (player.lastName || "").split(" ")[0] }}</span>

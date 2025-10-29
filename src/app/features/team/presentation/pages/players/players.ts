@@ -18,6 +18,5 @@ export class PlayersPage {
 
   constructor() {
     this.players.set(this.httpPlayerService.getPlayers())
-    console.log(this.players())
   }
 }
