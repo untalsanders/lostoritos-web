@@ -27,7 +27,7 @@
     "@fortawesome/free-brands-svg-icons": "7.0.0",
     "@fortawesome/free-regular-svg-icons": "7.0.0",
     "@fortawesome/free-solid-svg-icons": "7.0.0",
-    "@supabase/supabase-js": "2.55.0",
+    "@supabase/supabase-js": "2.76.1",
     "@tailwindcss/postcss": "4.1.11",
     "angular-svg-icon": "19.1.1",
     "gray-matter-browser": "4.0.4",
